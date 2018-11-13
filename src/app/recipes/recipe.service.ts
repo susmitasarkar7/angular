@@ -24,6 +24,13 @@ export class RecipeService {
       [
         new Ingredient('Buns', 2),
         new Ingredient('Meat', 1)
+      ]),
+      new Recipe('Spaghetti and Meatballs',
+      'Try our Spaghetti & Meatball Cups.',
+      'https://hips.hearstapps.com/del.h-cdn.co/assets/17/39/2048x1365/gallery-1506456062-delish-spaghetti-meatballs.jpg?resize=768:*',
+      [
+        new Ingredient('Spaghetti', 2),
+        new Ingredient('Meatballs', 5)
       ])
   ];
 
