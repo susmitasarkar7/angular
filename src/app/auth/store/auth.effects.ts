@@ -15,8 +15,9 @@ export class AuthEffects {
     .map((action: AuthActions.TrySignup) => {
         return action.payload;
     })
-    .switchMap((authData: {usernmae:string, password:string}) => {
-
+    .switchMap((authData: {username:string, password:string}) => {
+        return fromPromise(firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(authData.username,
+        authData.password));
     });
 
     constructor(private actions$: Actions) {
